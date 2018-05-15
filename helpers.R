@@ -211,7 +211,7 @@ cv.lasso <- function(y,X,alpha=1,nfolds=10){
   Comptime_lasso <- (proc.time()-ptm)[3]
   yhat <- fit_lasso$fitted.values
   
-  return(list( ix=ixx, coef=fit_lasso$coefficients))
+  return(list(fit=fit_lasso, ix=ixx, coef=fit_lasso$coefficients))
 }
 
 pred <- function(coef){
